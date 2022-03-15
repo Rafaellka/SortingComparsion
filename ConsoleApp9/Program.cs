@@ -171,15 +171,21 @@ namespace ConsoleApp9
             }
 
             for (var i = left; i <= middleIndex; i++)
+            {
                 tempArray[index] = array[i];
                 index++;
+            }
 
             for (var i = right; i <= highIndex; i++)
+            {
                 tempArray[index] = array[i];
                 index++;
+            }
 
             for (var i = 0; i < tempArray.Length; i++)
+            {
                 array[lowIndex + i] = tempArray[i];
+            }
         }
 
         //сортировка слиянием
@@ -203,7 +209,6 @@ namespace ConsoleApp9
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Сортировка пузырьком");
             string[] strings = { "123", "sfag", "artea" };
             var sortedArray = MergeSort(strings);
             for(var i = 0; i < sortedArray.Length; i++)
